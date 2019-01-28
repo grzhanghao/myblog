@@ -1,0 +1,1646 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>语法俱乐部</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb
+}
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+
+<style type="text/css">
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: black;
+	background: none;
+	text-shadow: 0 1px white;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+@media print {
+	code[class*="language-"],
+	pre[class*="language-"] {
+		text-shadow: none;
+	}
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #f5f2f0;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: slategray;
+}
+
+.token.punctuation {
+	color: #999;
+}
+
+.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+	color: #a67f59;
+	background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+	color: #07a;
+}
+
+.token.function {
+	color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+	color: #e90;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<h1 id="toc_0">语法俱乐部</h1>
+
+<p>旋元佑</p>
+
+<h2 id="toc_1">第一篇 初级句型--简单句</h2>
+
+<h3 id="toc_2">第一章 基本句型及补语</h3>
+
+<p>五种单句的基本句型  --p3  </p>
+
+<blockquote>
+<ol>
+<li>S + V (主语 + 动词)  <code>V -- 不及物动词</code></li>
+<li>S + V + O (主语 + 动词 + 宾语) <code>V -- 及物动词</code> </li>
+<li>S + V + C (主语 + 动词 + 补语)  <code>V -- 连缀动词</code></li>
+<li>S + V + O + O (主语 + 动词 + 宾语 + 宾语)  <code>V -- 双宾语动词</code> </li>
+<li>S + V + O + C (主语 + 动词 + 宾语 + 补语)<br></li>
+</ol>
+</blockquote>
+
+<p>解释为“是”的动词  --p4  </p>
+
+<blockquote>
+<p>其实, 要了解补语, 只需要研究那些解释为“是”的动询.基本句型分五种, 是因为有五种特性不同的动词而造成的。<mark>在所有的英语动词中, 只有解释为“是” 的动词是空的, 完全没有意义.</mark>也只有这种动词才需要补语来补足句子的意思。   </p>
+</blockquote>
+
+<p>补语  --p6  </p>
+
+<blockquote>
+<p>解释为“是”的动词没有叙述能力,只能把主语和后面构成叙述的部分连接起来, 所以它又叫做 “连缀动词” (Linking Verb).跟在这种动词后面的部分, 因为替代了动词所扮演的叙述角色,补足句子使它获得完整的意思，称之为“补语”(Complement)。  </p>
+</blockquote>
+
+<p>连缀动词  --p7</p>
+
+<blockquote>
+<p>Look    看起来是<br>
+seem    似乎是<br>
+appear  显得是<br>
+sound   听起来是<br>
+feel    摸起来是<br>
+taste   尝起来是<br>
+turn    转变为<br>
+prove   证实为<br>
+become  成为<br>
+make    做为  </p>
+</blockquote>
+
+<p>S + V + C (主语 + 动词 + 补语)句型  --p8   </p>
+
+<blockquote>
+<p>That dress <mark>looks</mark> pretty. (那件裙子很好看. )<br>
+The dog <mark>seems</mark> friendly. (那只狗好像很友善. )<br>
+His demands <mark>appear</mark> reasonable. ( 他的要求显得很合理, )<br>
+His trip <mark>sounds</mark> exciting. (他的旅行听起来 很刺激, )<br>
+I <mark>feel</mark> sick. (我感觉不舒服。 )<br>
+The drug <mark>tastes</mark> bitter.(药很苦. )<br>
+The story <mark>proved</mark> false. (故事经证实是捏造的. )<br>
+He <mark>became</mark> a teacher.(他当了老师. )<br>
+A nurse <mark>makes</mark> a good wife.(娶护士做太太真不错.)  </p>
+</blockquote>
+
+<p>S + V + O + C (主语 + 动词 + 宾语 + 补语)句型  --p8~9</p>
+
+<blockquote>
+<p>I find the dress pretty. (我觉得这衣服很漂亮。）<br>
+The meat made the dog friendly. (肉让狗变得很友善. )<br>
+They consider his demands reasonable.(他们认为他的要求是合理的.)<br>
+He found the trip exciting.(他觉得这次旅行很刺激. )<br>
+The food made me sick.(这种食物使我想吐, )<br>
+I don&#39;t find the drug bitter.(我并不觉得药很苦. )<br>
+I consider the story false.(我认为故事是捏造的.)<br>
+His college training made him a teacher.(他的大学教育使他成为一名教师.)<br>
+Most people consider a nurse a good wife.(大多数的人认为护士会是称职的太太.)  </p>
+
+<p>检验S+V+O+C句型最简便的方法: 把宾语和补语拿出来,中间加be动词,看看能不能改成S+V+C.</p>
+</blockquote>
+
+<p>补语的词类  --p9</p>
+
+<blockquote>
+<p>补语的词类，应该是名词和形容词比较合理。  </p>
+</blockquote>
+
+<p>没有补语的be动词  --p10</p>
+
+<blockquote>
+<p>如果看到be动词后面没有补语,表示这个be动词并不是当做连缀动词使用。这时候be动词并不解释为“是”,而要解释为“存在”,用在最单纯的“主语+动词(S+V)&quot;的句型中。<br>
+例<br>
+I think; therefore I am. 我思故我在。<br>
+To be or not to be, that is the question. </p>
+</blockquote>
+
+<p>S + V + O + O  --p11</p>
+
+<blockquote>
+<p>S + V + O + O 句型的动词可以接两个宾语。<br>
+例<br>
+John&#39;s <u>father</u>(<mark><u>S</u></mark>) <u>gave</u>(<mark><u>V</u></mark>) <u>him</u>(<mark><u>O</u></mark>) <u>a dog</u>(<mark><u>O</u></mark>).（约翰的父亲给他一只狗。）<br>
+这两个宾语，一个是给的对象，一个是给的东西。两个宾语不是相等的关系。<br>
+与 S + V + O + C 区分开，宾语和补语间存在有“等于是”的关系。<br>
+例<br>
+John&#39;s <u>father</u>(<mark><u>S</u></mark>) <u>called</u>(<mark><u>V</u></mark>) <u>him</u>(<mark><u>O</u></mark>) <u>a dog</u>(<mark><u>C</u></mark>).（约翰的父亲骂他是狗。）    </p>
+</blockquote>
+
+<h3 id="toc_3">第二章 名词短语与冠词</h3>
+
+<p>名词短语  --p18</p>
+
+<blockquote>
+<p>名词短语包括限定词、形容词、名词三个部分。任一部分都可能省略。</p>
+</blockquote>
+
+<p>什么时候不需要限定词  --p19~20</p>
+
+<blockquote>
+<p>从语源学(etymology)的角度来看,冠词a(n)可以视为one一字的弱化(reduction)结果。也就是说,a(n)就代表one的意思, 只是语气比较弱。a(n)与one 同样都是在交代它后面所接的名词是“一个”的概念。 如果后面的名词不适合以“一个” 来交代, 也就是不适合加a(n)的话,就可把限定词这个位置空下来。<br>
+除了复数以外, 抽象名词 (如honesty、bribery)没有具体形状, 不能以 “一个” 来表示。 物质名词 (如 water, food) 虽然是具体的东西, 可是形状不固定, 也不能以“一个”来表示。 这些不能以a(n)来引导的词就可以把限定词省略。  </p>
+</blockquote>
+
+<p>专有名词  --p20~21</p>
+
+<blockquote>
+<p>人名 (如Genghis Khan)、地名 (如Taibei)等都是专有名词。因为它所代表的对象只有一个,也不适合加a(n),所以可以不用限定词。<br>
+要判断一个名词是否为专有名词, 有时并不是那么容易。 像Sunday这种字, 一个月中可能会有四到五天, 所以我们可以说:
+There are <mark><u>five Sundays</u></mark> this month.(这个月有五个星期日.)<br>
+这时候它就不算是专有名词。<br>
+可是在一个星期中星期日只有一天, 所以我们也可以说:<br>
+I have an appointment on <mark><u>Sunday</u></mark>.(我星期日有约. )<br>
+这时它就是唯一的一天, 也就算是专有名词。  </p>
+</blockquote>
+
+<p>补语位置的专有名词  --p21~22  <strong>-???(解释的有些勉强)???-</strong></p>
+
+<blockquote>
+<p>放在补语位置的专有名词最难以判断。 补语和主语 (或宾语)之间有同等的关系, 如果主语 (或宾语) 是专有名词 (例如人名)的话, 那么它的补语既然和它同等,便也会被当做是专有名词来使用,条件是在补语位置上的名词也必须具有“唯一”的性质。例如:<br>
+Mr.Elson was <mark><u>president</u></mark> of the high school.<br>
+(埃尔森先生曾是这所高中的校长.)</p>
+</blockquote>
+
+<p>定冠词the  --p23</p>
+
+<blockquote>
+<p>在语源学上,the 可视为that或those的弱化形式。而that或those是指示形容词, 有明确的指示功能。 所以定冠词the也可以用同样的角度来了解: 凡是上下文中有明指或暗示时, 也就是有“那个”的指示功能时, 便要用定冠词the。  </p>
+</blockquote>
+
+<p>传统语法中所谓的“例外的”专有名词  --p27~29</p>
+
+<blockquote>
+<p>the Pacific(Ocean)      太平洋<br>
+  the Atlantic(Ocean)     大西洋<br>
+  the Indian Ocean        印度洋<br>
+  the Mediterranean(Sea)  地中海
+  the Dead Sea            死海<br>
+  the是用来修饰Ocean、Sea这些普通名词的。<br>
+the Philippine Islands-&gt;the Philippines(菲律宾群岛)<br>
+  the Alp Mountains-&gt;the Alps(阿尔卑斯山)
+  the修饰的是Islands、Mountains。<br>
+the Mississippi(River) 密西西比河<br>
+  the Titanic(Ship)  泰坦尼克号<br>
+  the Hilton(Hotel)  希尔顿饭店
+  the修饰的是括号里的普通名词。<br>
+the United States of America 美国<br>
+  the United Nations 联合国<br>
+  这两个例子中, 在名词位置的其实都是普通名词(States，Nations),皆可加冠词。只有America 这个名词短语是专有名词, 所以前面没有加冠词。</p>
+</blockquote>
+
+<h3 id="toc_4">第三章 动词时态</h3>
+
+<p>简单式  --p38~45</p>
+
+<blockquote>
+<p>简单式的动词可以清楚交代此动作是发生于哪个时段。而与它搭配的时间副词通常会明确标示出一个时段。<br>
+过去某个时间（段）发生的 -- 过去式<br>
+现在某个时间（段）发生的 -- 现在式<br>
+将来某个时间（段）发生的 -- 将来式  </p>
+</blockquote>
+
+<p>完成式  --p45~50</p>
+
+<blockquote>
+<p>完成式不对动作发生的时间段做明确的交代，只表示“曾经”、“做过”的意思。<br>
+过去某个时间（段）之前发生的 -- 过去完成式<br>
+现在某个时间（段）之前发生的 -- 现在完成式<br>
+将来某个时间（段）之前发生的 -- 将来完成式  </p>
+</blockquote>
+
+<h3 id="toc_5">第四章 不定词短语</h3>
+
+<p>p59</p>
+
+<blockquote>
+<p>所谓“不定词短语”, 就是to加上原形动词所形成的短语。......不定词最合理的解释就是把它视为助动词的变化。只要确实弄清楚不定词与助动词之间的关系, 就可以不必背任何规则、表格, 而全盘了解不定词的变化以及它与其他“动状词”(Verbals)之间的关系,包括现在分词、过去分词与动名词。  </p>
+</blockquote>
+
+<p>不定词与助动词的共同点 --p59~64</p>
+
+<blockquote>
+<ol>
+<li>后面都接原形动词<br>
+
+<ul>
+<li>I will go. (我要走了。)<br></li>
+<li>I want to go. (我想去。)<br></li>
+</ul></li>
+<li>都有不确定的语气<br>
+
+<ul>
+<li>He mey be right. (他可能是对的。)<br></li>
+<li>He seems to be right. (他好像是对的。)<br></li>
+</ul></li>
+<li>都要用完成式来表达相对的过去时间<br>
+
+<ul>
+<li>It must have rained last night. (昨晚一定下过雨。)<br></li>
+<li>It seems to have rained last night. (昨晚好像下过雨。)<br></li>
+</ul></li>
+<li>所有重要的语气助动词，都可以改写为不定词<br>
+must -- have to<br>
+should -- ought to<br>
+will/would -- be going to<br>
+can/could -- be able to<br>
+may/might -- be likely to<br>
+从以上四点来看, 不定词与助动词其实是同一种东西的相互变化, 凡是不定词出现的地方, 都可以看成是另外一个从句的省略:把主语省略, 助动词改为不定词。</li>
+</ol>
+</blockquote>
+
+<p>不定词和动名词的区分 --p64~72</p>
+
+<blockquote>
+<p>传统语法所称的动状词(Verbals),包括现在分词(Ving), 过去分词(Ven)、动名词(Ving)与不定词(to V)等等。其中现在分词、过去分词是形容词类, 不定词则是“不一定什么词类”: 它可以当名词、形容词、副词使用。这就产生了一些混淆点。比如说, 动词后面的宾语位置, 必须用名词类。可是动名词和不定词都可以当做名词使用 (分词只能当形容词, 可以不必考虑), 到底应如何区分?
+有计划性、不确定性的意思时用不定词。  </p>
+</blockquote>
+
+<p>使役动词与原形动词 --p69~70</p>
+
+<blockquote>
+<p>使役动词后接原形动词，不能用不定词。  </p>
+</blockquote>
+
+<p>感官动词与原形动词 --p71~72  </p>
+
+<blockquote>
+<p>感官动词后接原形动词，不能用不定词。  </p>
+</blockquote>
+
+<h3 id="toc_6">第五章 动名词</h3>
+
+<p>动名词与普通名词的比较  --p82~83</p>
+
+<blockquote>
+<p>动名词相对于普通名词而言, 仍然保留有若干程度的“动作”意味,而且可以有“持续性&quot;的暗示。<br>
+例:<br>
+Let me buy you a drink.(我请你喝一杯。 )<br>
+  Drinking is his only vice.(喝酒是他唯一的坏习惯。 )<br>
+若要区分“抽象概念”与“动作过程”, 只要一个用普通名词,一个用暗示“动作、 持续”的动名词就可以了。<br>
+例:<br>
+I am not afraid of death,but I am scared of dying.<br>
+(死亡我倒不怕,只是怕死的过程.)<br>
+普通名词death代表“死亡”的抽象概念。 相信灵魂不朽的人像苏格拉底, 大概都不会畏惧死亡本身。可是只要是人,就会有求生、避免痛苦的本能,在面临死亡的过程时仍然难免会恐惧。<br>
+动名词的结构很像普通名词, 可以有冠词 (例如: the burning); 有所有格 (例如:his running); 有复数(例如:two weddings).<br>
+例:<br>
+There are two weddings at the restaurant tonight.(这家餐厅今晚有两场婚礼。)  </p>
+</blockquote>
+
+<p>复合字 --p85</p>
+
+<blockquote>
+<p><mark><u>Picking strawberries</u>(S)</mark> <mark><u>can be</u>(V)</mark> <mark><u>fun</u>(C)</mark>.
+(采草莓很好玩。 )<br>
+ <mark><u>The picking</u>(S)</mark> of strawberries <mark><u>requires</u>(V)</mark> <mark><u>patience</u>(O)</mark>.
+(采草莓要有耐心。)<br>
+ <mark><u>Strawberry-picking</u>(S)</mark> <mark><u>is</u>(V)</mark> <mark><u>a strenuous job</u>(C)</mark>.
+(采草莓是很费力的工作. )  </p>
+</blockquote>
+
+<p>主词不能省略时的处理方式 --p86~87</p>
+
+<blockquote>
+<p><mark><u>I</u>(S)</mark> <mark><u>don&#39;t like</u>(V)</mark> <mark><u>that John calls my girlfriend day after day</u>(O)</mark>.<br>
+(约翰每天打电话给我女朋友, 让我很不舒服。)<br>
+ <mark><u>I</u>(S)</mark> <mark><u>don&#39;t like</u>(V)</mark> <mark><u>John&#39;s calling my girlfriend day after day</u>(O)</mark>.<br>
+动名词的主语与主要从句的主语不同时, 处理方式就是用所有格的形式保留下来。</p>
+</blockquote>
+
+<p>动名词的被动式 being Ven</p>
+
+<blockquote>
+<p><mark><u>That I was invited here</u>(S)</mark> <mark><u>is</u>(V)</mark> <mark><u>a great honor</u>(C)</mark>.
+(受邀来到此地, 是莫大的荣誉。 )<br>
+<mark><u>Being invited here</u>(S)</mark> <mark><u>is</u>(V)</mark> <mark><u>a great honor</u>(C)</mark>.</p>
+</blockquote>
+
+<h3 id="toc_7">第六章 分词</h3>
+
+<p>--p97</p>
+
+<blockquote>
+<p>分词视为形容词。<br>
+形容词是用来形容名词的，在句中有两种位置<br>
+* 名词短语中<br>
+* 补语位置  </p>
+</blockquote>
+
+<p>现在分词与形容词的关系  --p98</p>
+
+<blockquote>
+<p>有正在、一直的意思。<br>
+That black dog doesn&#39;t bite. (那只黑狗不咬人。)<br>
+A barking dog doesn&#39;t bite. (爱叫的狗不咬人。)  </p>
+</blockquote>
+
+<p>过去分词与形容词的关系 --p99</p>
+
+<blockquote>
+<p>有被动、完成的意思。<br>
+Clean water is safe to drink. (干净水可以安全饮用。)<br>
+Boiled water is safe to drink. (开水可以安全饮用。)  </p>
+</blockquote>
+
+<p>带有“完成”暗示而非“被动态”的过去分词  --p100  </p>
+
+<blockquote>
+<p>I can&#39;t find my wallet. It&#39;s gone. (我找不到皮夹。它不见了。)<br>
+go是不及物动词，没有被动，有完成的暗示。  </p>
+</blockquote>
+
+<p>现在分词与过去分词的区分  --p101~103  </p>
+
+<blockquote>
+<p>两种分词都是形容词, 差别在于现在分词有“进行”的暗示,过去分词有“被动”、 “完成” 的暗示, 大致依此区分就不会错。<br>
+需要注意的情况  </p>
+
+<ol>
+<li> 表示“感觉“的分词<br>
+例<br>
+He is disappointed at his scores. (他对分数很失望. )<br>
+His scores are disappointing.(他的分数令人失望. )<br>
+有一些表示“感觉”的字,像disappoint,satisfy,surprise,amaze,astonish,scare,terrify,please,tire,exhaust..等,该用现在分词还是过去分词,有时用中文的“主动”、“被动”一时会想不清楚.像上面的两个例子, 可以先还原为这种形状:<br>
+<mark><u>His scores</u>(S)</mark> <mark><u>disappoint</u>(V)</mark> <mark><u>him</u>(O)</mark>. (他的分数令他失望。)<br>
+所以用He做主语，应该是被动态。<br></li>
+<li> 词根词首分析<br>
+主动被动的判断涉及动词的及物和不及物，分析词根词首判断及物和不及物。<br>
+例<br>
+Water consists of hydrogen and oxygen.<br>
+Water is composed of hydrogen and oxygen.<br>
+(水由氢分子和氧分子组成.)<br>
+consist的词根sist是 stand或be的意思, 都是不及物, 配合词首con(together),可以解释为stand together或be together。既然它是不及物动词,自然没有被动态,也没有宾语。可是compose就不同了。词根pos解释为place(放),是及物动词,所以可以有被动态,才可以用到过去分词composed.</li>
+</ol>
+</blockquote>
+
+<p>形容词从句简化的结果  --p104~105</p>
+
+<blockquote>
+<p>形容词从句简化之后往往剩下分词。</p>
+
+<ol>
+<li>Ven<br>
+Toys made in Taiwan are much better now.<br>
+(现在台湾制造的玩具好多了。 )<br>
+Toys which are made in Taiwan are much better now.<br></li>
+<li>Ving<br>
+Children living in orphanages make a lot of friends.<br>
+(在孤儿院生活的小朋友可以交很多朋友。)<br>
+Children who are living in orphanages make a lot of friends.</li>
+<li>being Ven<br>
+The vase being auctioned now is a Ming china.<br>
+(正在拍卖的花瓶是明朝的瓷器.)<br>
+这里的 being auctioned 是 which is being auctioned 的简化。其中being表示“正在”,auctioned表示“被拍卖”,如果没有being,只剩下过去分词 auctioned,就有“完成”的暗示,读者可能会以为“已经卖掉了”。 加上being是为了去除这种误会, 增加表达的清楚性。</li>
+</ol>
+</blockquote>
+
+<p>副词从句简化的结果  --p105~107</p>
+
+<blockquote>
+<ol>
+<li>Ven<br>
+Wounded in war,the soldier was sent home.<br>
+(在战场上受了伤, 士兵就被遣送回家了.)<br>
+After/Because he was wounded in war,the soldier was sent home.<br></li>
+<li>Ving  ???<br>
+The pigeon,<mark><u>after flying 200 miles</u></mark>,was caught up in a net.<br>
+(这只鸽子在飞了 200英里之后被网子网住了.)<br>
+本句中底线部分原来是副词从句 after it flew 200 miles. 因为主语it就是the pigeon, 因而可以省略. 再下来没有be动词可省,就要先改成进行式 (after it was flying...) 使它有 be 动词, 才可成功地省掉动词, 剩下补语部分。 去掉主语、 动词后, 连接词 after也可以省掉.可是副词从句的连接词有意义,Before,When和After的意义都不一样, 所以可以选择留下来, 就成了 after flying 200miles。 这也是分词构句。</li>
+<li>having Ven  ???<br>
+<mark><u>Having finished the day&#39;s work</u></mark>,the secretary went home.<br>
+(做完一天的工作后, 秘书回家去了.)
+加底线部分原本是副词从句 She had finished the day&#39;s work。简化的原因还是因为主语相同。而由于动词部分没有be动词，就不能进一步简化下去, 因此改成having finished...的现在分词形态, 等于前面省去be动词, 而留下补语部分。<br></li>
+</ol>
+</blockquote>
+
+<h3 id="toc_8">第七章 形容词</h3>
+
+<p>形容词  --p113</p>
+
+<blockquote>
+<p>英语的修饰语有两种词类: 形容词和副词。形容词是修饰名词用的。副词则用来修饰名词以外的词类, 包括动词、形容词与其他副词。当然, 也有些特别的副词可以用来修饰名词, 这一点留待以后谈到副词部分时再来讨论。 大致说来, 形容词是可以定义为修饰名词的修饰语。<br>
+广义的形容词包括形容词从句、简化形容词从句 (包含分词短语、同位语,不定词)、介系词语、复合词及单词等等。本章的内容以单词形状的形容词为主, 其余的留待将来在相关章节中分别叙述。单词形状的形容词, 通常在句子中只有两种位置可能出现: 名词短语中以及补语位置。</p>
+</blockquote>
+
+<p>名词短语中的形容词  --p113~116</p>
+
+<blockquote>
+<p>一般出现在限定词（像a、the、this、some、five、John&#39;s等词）与名词中间。</p>
+
+<ul>
+<li><p>有几个特别的形容词出现在名词短语中时，放在名词后面。  </p>
+
+<ul>
+<li><p><mark>else</mark>配合someone、anybody等复合名词使用时，放到名词后面。<br>
+例<br>
+Someone else will have to do it. (另外要有人去做这事。)<br>
+I don&#39;t know anybody else. (我不认识别的人)  </p></li>
+<li><p>有些a-开头的古英语形容词，要用在名词短语中，放在名词后面。<br>
+例<br>
+John and his brother alike are unreliable.(约翰和他弟弟都不可靠。)<br>
+Money alone cannot solve our problem.(光靠钱解决不了我们的问题。)  </p></li>
+</ul></li>
+<li><p>名词专用为形容词<br>
+例  </p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th>限定词</th>
+<th>形容词</th>
+<th>名词</th>
+<th></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>a</td>
+<td>government</td>
+<td>store</td>
+<td>(一家公营商店)</td>
+</tr>
+<tr>
+<td>my</td>
+<td>pencil</td>
+<td>sharpener</td>
+<td>(我的削铅笔机)</td>
+</tr>
+<tr>
+<td>a</td>
+<td>cigarette</td>
+<td>box</td>
+<td>(一个香烟盒)</td>
+</tr>
+<tr>
+<td></td>
+<td>movie</td>
+<td>theaters</td>
+<td>(电影院)</td>
+</tr>
+</tbody>
+</table>
+
+<p>因为做形容词，所以都是单数形式。  </p>
+
+<ul>
+<li>复合词形容词<br>
+单词形状的形容词才能够放人名间短语中间的位置。如果是短语形状而要放到名词短语中, 就必须先加上hyphen制造成复合词。如果原先的短语中有复数的名词存在,还得先把-s去掉,因为要当形容词单词使用, 不能有复数。<br>
+例<br>
+a turn-of-the-century publication<br>
+(一册在世纪转换之际出版的作品)<br>
+an eye-opening experience<br>
+(令人大开眼界的经验)<br>
+a five-year-old child<br>
+(一个五岁小孩)<br>
+a 100-watt light bulb<br>
+(一支100瓦的灯泡)<br></li>
+</ul>
+</blockquote>
+
+<p>名词短语中形容词的顺序  --p117~118</p>
+
+<blockquote>
+<p>在attributive adjectives之间, 愈是表达名词属性的形容词越要靠近名词。亦即, 越是不可变的、客观的特质越要靠近名词。反之, 越是可变的、临时的、主观的因素则越要放得远离名词。<br>
+例<br>
+The murderer left behind a bloody old black Italian leather glove.<br>
+(凶手丢下一只沾血, 老旧、 黑色、 意大利制的皮手套.)<br>
+leather放得最近glove,因为leather是内容, glove是形式. 内容与形式是不可分的。就算手套剪碎了, 皮革材料还在里面。表示产地的 Italian也是属于不可变的因素。而且, an Italian glove(大利手套)有相当强的表示属性的功能一一告诉别人这是哪一种手套。至于说颜色black, 在皮革染上黑色之后就不会变了。old这个字则是手套制成之后由新慢慢变旧。至于bloody, 原先没有沾血,行凶时沾上。只要拿去洗,随时可以变干净, 旧则不能再变新了。所以, bloody这个形容词和 “手套” 的属性最无关, 也是最可变的修饰语,就要放在这一堆 attributive adjectives的最前面。<br>
+练习<br>
+He&#39;s wearing a handsome old brown U.S.Air Force leather
+flying jacket.<br>
+(他穿一件帅气, 陈旧, 褐色, 美国空军的皮质飞行夹克。 )<br>
+提示 handsome
+是主观的字眼。夹克帅不帅,见仁见智,所以handsome是和jacket
+的属性最无关的字眼。而flying jacket一定要放在一起才能表示“飞
+行夹克”, 所以flying是表示这种夹克属性最强的字眼, 要放得最
+接近。  </p>
+</blockquote>
+
+<p>形容词在名词短语位置与补语位置的比较  --p118~119</p>
+
+<blockquote>
+<p>名词短语中的形容词叫做 attributive adjectives,用来表达该名词的属(attribute)。补语位置的形容词叫做 predicative adjectives,用来补述(predicate)关于名词的事项。 补语位置的形容词距离名词最远, 惯常用来对名词做一些临时性, 补充性的叙述, 与表示腐旺的 attributive adjectives 在语气上颇不相同。 
+例<br>
+<mark>John</mark> is <mark>sick</mark> today and couldn&#39;t come to work.(predicativd)<br>
+(今天约翰生病, 不能来上班, )<br>
+ John is a <mark>sick</mark> man.(attributive)<br>
+(约输是个病人. )  </p>
+</blockquote>
+
+<p>补语位置的形容词  --p119~120</p>
+
+<blockquote>
+<p>这个位置的形容词比较自由,单词、短语皆可使用.
+例<br>
+<mark><u>This lake</u>(S)</mark> is <mark><u>deep</u>(C)</mark>. (这个湖很深。 )<br>
+She makes <mark><u>everyone</u>(O)</mark> <mark><u>happy</u>(C)</mark>.(她让所有人都感到快乐。 )<br>
+<mark><u>Chinese culture</u>(S)</mark> is <mark><u>5000 years old</u>(C)</mark>.(中国文化已有5,000年的历史.)<br>
+I heard <mark><u>her</u>(O)</mark> <mark><u>playing the violin</u>(C)</mark>.(我听到她在拉小提琴。 )<br>
+上面提到的一批a-开头的古英语形容词, 因为它所暗示的 “暂时性” 语气, 使它不适合放在名词短语中的位置, 而最常出现在补语位置。<br>
+例<br>
+<mark><u>The fish</u>(S)</mark> is still <mark><u>alive</u>(C)</mark>.(鱼还活着. )<br>
+<mark><u>The balloon</u>(S)</mark> stays <mark><u>afloat</u>(C)</mark>.(气球还飘在空中.)<br>
+They found <mark><u>the professor</u>(O)</mark> <mark><u>alone</u>(C)</mark>. (他们见到教授独自一人,)<br>
+Coffee keeps <mark><u>him</u>(O)</mark> <mark><u>awake</u>(C)</mark>.(咖啡使他头脑清醒. )  </p>
+</blockquote>
+
+<p>形容词比较级拼法 --p120~121  </p>
+
+<blockquote>
+<ul>
+<li><p>单音节的形容词在词尾变化。 </p></li>
+<li><p>三音节以上的形容词分成两个词处理（加more、most）。</p></li>
+<li><p>两个音节的形容词, 如果词尾是典型的形容词词尾,有明显的标示词类的功能, 应保留词尾不变, 分成两个词处理。 此外则随意。<br>
+例<br>
+crowded more crowded most crowded<br>
+loving  more loving  most loving<br>
+helpful more helpful most helpful<br>
+useless more useless most useless<br>
+famous  more famous  most famous<br>
+active  more active  most active<br>
+often oftener(more often) oftenest(most often)<br>
+shallow shallower(more shallow) shallowest(most shallow)  </p></li>
+<li><p>-y结尾的，变成i，再加词尾变化。<br>
+例<br>
+happy happier happiest<br>
+lucky luckier luckiest  </p></li>
+</ul>
+</blockquote>
+
+<p>比较级的定冠词  --p122~123</p>
+
+<blockquote>
+<p>一般语法书都列出一条规则: 最高级要加定冠词。其实, 冠词是跟着名词走的。出现在名词短语中的形容词, 它前面才有可能会有冠词出现。 如果是补语位置的形容词,不存在于名词短语中, 自然也没有冠词的问题。  </p>
+
+<p>例<br>
+<mark><u>Yangmingshan</u>(S)</mark> is <mark><u>crowded</u>(C)</mark>.(阳明山人潮汹涌. )<br>
+<mark><u>Yangmingshan</u>(S)</mark> is <mark><u>most crowded</u>(C)</mark> in March.(三月的阳明山人最多.)<br>
+crowded在这两个句子中都位于补语位置, 用来形容主语Yangmingshan。因为不出现在名词短语中, 自然不可能有冠词。  </p>
+
+<p>例<br>
+Yangmingshan is a crowded scenic spot.(阳明山是个游人如织的风景区.)<br>
+Yangmingshan is the most crowded of Taibei&#39;s scenic spots.(阳明山是台北游人最多的风景区.)<br>
+第1个句子的补语是名词短语 a crowded scenic spot,形容词crowded位于名词短语中。 
+第2个句子中 the most crowded 之后虽没有名词,可是有介系词短语 of Taibei&#39;s scenic spots(在台北各风景区之中),因而可以看出来是 the most crowded one的省略, 形容词most crowded 出现于名词短语the one的中间。 “在台北各风景区之中最拥挤的&#39;那个&#39;(风景区)”。在一个特定的范围中指出“最....&quot;的一个, 有明确的指示功能, 因而需要定冠词 the。 </p>
+
+<p>例<br>
+John is the shorter of the twins.(约翰是双胞胎中较矮的那个.)<br>
+这个句子中虽然是比较级, 可是 shorter 在双胞胎之中充分指出说的是哪一位, 所以仍然要有定冠词。  </p>
+</blockquote>
+
+<p>比较级的句子要求对称工整 --p123~124</p>
+
+<blockquote>
+<p>略</p>
+</blockquote>
+
+<p>比较级的倒装  --p124~125  </p>
+
+<blockquote>
+<p>比较级一定会有重复的部分, 因而会有省略, 也因此可以有倒装句法。<br>
+例<br>
+A chimp <mark><u>has as much I.Q.</u></mark> as <mark><u>a child</u>(S)</mark> of five or six <mark><u>does</u>(V)</mark>.<br>
+(黑猩猩的智商相当于五六岁小孩的智商。)<br>
+例子中是用助动词does来取代上文中的 has I.Q.以避免重复。然而,does放在句尾,和它所代表的部分隔有一段距离,而且does和它的主语a child之间也隔了一个介词短语 of five or six。这些距离都会妨碍句子的清楚流畅性。 
+如果倒装就能避免这些毛病，如<br>
+A chimp <mark><u>has as much I.Q.</u></mark> as <mark><u>does</u>(V)</mark> <mark><u>a child</u>(S)</mark> of five or six.  </p>
+</blockquote>
+
+<h3 id="toc_9">第八章 副词</h3>
+
+<blockquote>
+<p>副词要注意分类和句子中的位置</p>
+</blockquote>
+
+<p>方法、状态的副词(Adverbs of Manner)  --p134~138</p>
+
+<blockquote>
+<p>这一类的副词是修饰动词专用的, 典型的拼法是形容词加上-ly字尾。既然它是修饰动词的, 那么原则上它的位置应该尽量和动词接近, <mark>通常是放在动词后面的位置</mark>。可是, 副词是修饰语, 属于比较不重要的元素, 如果在句中有宾语、补语等主要元素存在时, 方法、状态的副词就要向后挪,让宾语、补语等元素先出来。假如后移的结果造成副词与它所修饰的动词之间距离太远,那么也可以另辟蹊径, 把方法, 状态的副词调到动词前面的位置去, 以维持修饰语必须和它所修饰的对象接近的原则。</p>
+
+<p>五种基本句型</p>
+
+<ol>
+<li><p>S + V<br>
+<mark><u>The child</u>(S)</mark> <mark><u>giggled</u>(V)</mark> <mark><u>happily</u>(adv.)</mark> under the caress of its mother.(小孩在母亲抚摸下笑得很开心.)<br>
+The child happily giggled...也对，但是最好还是放在后面。</p></li>
+<li><p>S + V + C<br>
+<mark><u>He</u>(S)</mark> <mark><u>kept</u>(V)</mark> <mark><u>quiet</u>(C)</mark> <mark><u>resolutely</u>(adv.)</mark>.(他坚定地保持沉默, )<br>
+He kept resolutely quiet. 因为副词也可修饰形容词，会造成语义不清，错误。<br>
+He resolutely kept quiet. 也正确。  </p></li>
+<li><p>S + V + O<br>
+<mark><u>He</u>(S)</mark> <mark><u>kissed</u>(V)</mark> <mark><u>the girl</u>(O)</mark> <mark><u>tenderly</u>(adv.)</mark>.(他温柔地吻了那个女孩。)<br>
+<mark><u>He</u>(S)</mark> <mark><u>passionately</u>(adv.)</mark> <mark><u>kissed</u>(V)</mark> <mark><u>the girl</u>(O)</mark> living next door.(他热情地吻了那个住隔壁的女孩. )  </p></li>
+<li><p>S + V + O + O<br>
+<mark><u>He</u>(S)</mark> <mark><u>showed</u>(V)</mark> <mark><u>us</u>(O)</mark> <mark><u>the document</u>(O)</mark> <mark><u>reluctantly</u>(adv.)</mark>(他很不情愿地把文件拿给我们看。 )<br>
+<mark><u>I</u>(S)</mark> <mark><u>willingly</u>(adv.)</mark> <mark><u>offer</u>(V)</mark> <mark><u>you</u>(O)</mark> <mark><u>my help</u>(O)</mark>.(我自愿对你提供帮助. )  </p></li>
+<li><p>S + V + O + C<br>
+<mark><u>They</u>(S)</mark> <mark><u>elected</u>(V)</mark> <mark><u>him</u>(O)</mark> <mark><u>chairman</u>(C)</mark> <mark><u>unanimously</u>(adv.)</mark>.(他们全体一致推选他出任主席.)<br>
+<mark><u>I</u>(S)</mark> <mark><u>happily</u>(adv.)</mark> <mark><u>pronounce</u>(V)</mark> <mark><u>you</u>(O)</mark> <mark><u>man and wife</u>(C)</mark>.(我很高兴宣布你们结为夫妇。 )  </p></li>
+</ol>
+</blockquote>
+
+<p>强调语气的副词(Intensifiers)  --p138~141  </p>
+
+<blockquote>
+<p>这一类副词有一个特色: 它在使用上很有弹性, 四种主要词类, 包括名词、动词、形容词与副词都可以用它来修饰。认识这一点, 才算真正弄清楚形容词与副词间的分工。 这一类的副词又可以细分为以下三种: </p>
+
+<ol>
+<li><p>强调范围的副词(Focusing Adverbs)<br>
+这一类的副词不多, 典型的像only,merely,also,especially,particularly,even等字就是这一类。它的功能在于清楚界定出所谈事物的范围, 好比照相机对焦(focusing)的动作一般。它的位置要求
+很严格, 有些要放在所修饰对象的前面, 有些则要放在后面, 但都不能和修饰的对象有任何距离。 因为它可以修饰任何词类, 只要位置一变动, 意思也就跟着发生变化。以下举only为例说明:  </p>
+
+<blockquote>
+<p>I heard about the accident yesterday.(我昨天听说了这件意外。)<br>
+<mark>Only I</mark> heard about the accident yesterday.(No one else did.)(只有我是昨天听说这件意外的。)<br>
+I <mark>only heard</mark> about the accident yesterday.(I didn&#39;t see it.)(我昨天只是听说了这件意外.)<br>
+I heard about <mark>only the accident</mark> yesterday.(I didn&#39;t hear anything else.)(我昨天全听人在讲这件意外.)<br>
+I heard about the accident <mark>only yesterday</mark>.(I didn&#39;t hear about it earlier.)(我直到昨天才听说这件意外。)  </p>
+</blockquote></li>
+<li><p>加强语气的副词(Intensifiers)<br>
+这是最典型的Intensifiers。它同样也是可以修饰四种主要词类, 包括名词在内。它的位置通常要放在修饰对象的前面。 请看以下的例子:  </p>
+
+<blockquote>
+<p>He is <mark><u>very much</u>(adv.)</mark> <mark><u>his father&#39;s son</u>(n.)</mark>. (他和他老爸一个调调.)<br>
+You&#39;re <mark><u>utterly</u>(adv.)</mark> <mark><u>insane</u>(a.)</mark>!(你是完完全全疯了. )<br>
+I <mark><u>badly</u> (adv.)</mark> <mark><u>need</u>(v.)</mark> a drink.(我亟需喝一杯. )  </p>
+</blockquote></li>
+<li><p>程度副词(Adverbs of Degree)<br>
+这一类副词和加强语气的副词很像, 但是程度副词是用来做“有几成” 的表示, 而非加强语气。所以, 如果把加强语气的副词去掉, 只是语气变弱, 意思不会变。但是如果拿掉程度副词, 意思则可能会发生改变, 如:</p>
+
+<blockquote>
+<p>The project is <mark><u>almost</u></mark> finished.(计划已经差不多完成了 . )    </p>
+</blockquote>
+
+<p>程度副词和另外两类的Intensifiers一样, 也是四大词类都可以修饰, 它的位置通常也是要放在修饰对象的前面。例如:</p>
+
+<blockquote>
+<p>You can buy <mark><u>practically</u>(adv.)</mark> <mark><u>anything</u>(n.)</mark> at a mall.(在购物中心几平什么都买得到.)<br>
+I <mark><u>can</u>(aux.)</mark> <mark><u>hardly</u>(adv.)</mark> <mark><u>hear</u>(v.)</mark> you.(我快听不到你在说什么了。)<br>
+The promotion was <mark><u>moderately</u>(adv.)</mark> <mark><u>successfiul</u>(a.)</mark>.(促销活动还算成功. )<br>
+I know your father <mark><u>rather</u>(adv.)</mark> <mark><u>well</u>(adv.)</mark>.(我跟你父亲还算蛮熟的. )    </p>
+</blockquote></li>
+</ol>
+</blockquote>
+
+<p>修饰句子的副词(Sentence Modifiers)  --p141~</p>
+
+<blockquote>
+<p>这又可以分成两类: 连接副词和分离副词。 这两类副词的位置, 通常是放在句首, 可是也可以挪到主语、动词中间, 甚至放到句尾位置。不论放在何种位置, 都需要有逗号把它和句子隔开来。  </p>
+
+<ol>
+<li><p>连接副词(Conjuncts)<br>
+这一类的副词很像连接词(Conjunctions), 有类似对等连接词and的(如besides、furthermore),以及类似but的(如howeve、nevertheless)等等。 它可以连接两句话间的逻辑关系, 可是缺乏连
+接词的语法功能, 所以要用标点来帮忙。  </p>
+
+<blockquote>
+<p>Vivien Leigh is brilliant.(费雯丽光芒四射. )<br>
+Clark Gable,<mark><u>however</u>(adv.)</mark>,is lousy.(克拉克. 盖博却很糟.)<br>
+<mark><u>Therefore</u>(adv.)</mark>,the film is less than perfect.(影片因而并非十全十美)
+It is still a good movie;<mark><u>besides</u>(adv.)</mark>,good romances are rare these days.(这部片子还是不错, 况且近来好的文艺片不多了。)  </p>
+</blockquote></li>
+<li><p>分离副词(Disjuncts)
+把它归于修饰句子的副词类是方便的分法。 严格说起来, 它应该是属于修饰另一句话的方法、状态副词。  </p>
+
+<blockquote>
+<p><mark><u>Scientifically</u>(adv.)</mark>,the experiment was a success.(从科学的角度来说,这个实验成功了.)  </p>
+</blockquote>
+
+<p>固然 scientifically 可以说是修饰全句, 可是深入一点来看, 这个句子是下面这句的省略:</p>
+
+<blockquote>
+<p><mark><u>Scientifically</u>(adv.)</mark> speaking,the experiment was a success.   </p>
+</blockquote>
+
+<p>这个副词其实是修饰动词speak的方法状态副词。更进一步把简化从句还原成下面的原貌:</p>
+
+<blockquote>
+<p>If we are speaking <mark><u>scientifically</u>(adv.)</mark>, the experiment was a success.  </p>
+</blockquote>
+
+<p>这个例子可以看出来,原来有两句话。第一句被简化成只剩一个方法、状态副词scientifically,修饰“怎么说”,再附在第二句上.看到这个地步, 就不难了解为什么这个副词要有逗点隔开了一一原来那是两个从句之间的逗号!<br>
+分离副词也可以调到主语动词中间的位置以及句尾的位置, 可是仍然要有逗号隔开。 请比较下面的例子:  </p>
+
+<blockquote>
+<p>You&#39;re not <mark><u>answering</u></mark> my questions <mark><u>honestly</u></mark>.(你并没有老实回答我。 )<br>
+<mark>Honestly</mark>,what are you going to do about it?(老实说, 你打算如何处置呢?)  </p>
+</blockquote>
+
+<p>第一句的honestly是单纯的方法、状态副词,修饰动词answer.
+第二句的honestly则是分离副词, 原本是honestly speaking(老实说).它是简化从句的残余, 可以为方便起见归于修饰全句的副词类。  </p></li>
+</ol>
+</blockquote>
+
+<p>结语    </p>
+
+<blockquote>
+<p>副词还包括时间副词、地方副词、频率副词等类别, 各类语法书中所述甚详, 也十分简单, 毋庸赘述。 另外副词也有比较级、最高级的变化, 但是原则和形容词比较级完全一样, 也无需再重复。只有一点: 副词的典型字尾是-ly。 在判断两个音节的副词的比较级拼法时, 要保留-ly字尾不去动它, 在前面more,most 来变化,像more sweetly,most sweetly. 除此之外, 副词比较级拼法的变化也是一如形容词。</p>
+</blockquote>
+
+<h3 id="toc_10">第九章 语气</h3>
+
+<blockquote>
+<p>语气(Moods)是利用动词变化来表达“真、假”口吻的方式。依各种不同程度的“真、假”口吻,可以细分为四种语气:  </p>
+
+<blockquote>
+<p>叙述事实语气(Indicative):表示所说的是真的。<br>
+条件语气(Conditional):表示真假还不能确定。<br>
+假设语气(Subjunctive):说反话, 表示所说的与事实相反。<br>
+祈使语气(Imperative):表示希望能成真,但尚未实现。  </p>
+</blockquote>
+</blockquote>
+
+<p>叙述事实语气  --p151~153  </p>
+
+<blockquote>
+<p>未来式需要注意。  </p>
+
+<blockquote>
+<p>I will go to the U.S. next year to study for an MBA degree.(我明年要到美国去念企管硕士.)  </p>
+</blockquote>
+
+<p>will带有一种不确定的语气，陈述的是一种计划(不确定)情况。</p>
+
+<blockquote>
+<p>The weatherman says sunrise tomorrow is at 5:32.(气象报告说明天日出是五点三十二分。)  </p>
+</blockquote>
+
+<p>日出时间可以推算确定，所以陈述明天的日出时间不用加带有不确定性的will。  </p>
+
+<blockquote>
+<p>The movie starts in 5 minutes. (电影还有五分钟开演.)</p>
+</blockquote>
+
+<p>开演时间是确定好的，所以也不用加带有不确定性的will。 </p>
+
+<blockquote>
+<p>I<mark>&#39;<u>ll be</u></mark> ready when he <mark>comes</mark>.(他来的时候我会有万全的准备.)  </p>
+</blockquote>
+
+<p>同时叙述到两件未来的事情,而两者之间有时间或条件的关联性时, 往往其中一件 (副词从句中的那件)要改成现在式。 这是因为两件未来的事情都不确定, 需要先假定其中一件是事实, 已经发生, 在这个确定的基础上,才能推论另一件事。 上例中的 when he comes 就是假定“他来”是确定的, 用表示确定语气的现在comes 来叙述, 然后才能推论 “到那候我会有准备 (I&#39;ll be ready)” . 
+类似的句子</p>
+
+<blockquote>
+<p>If you <mark><u>are</u></mark> late again,you<mark>&#39;<u>ll be</u></mark> fired.(你再迟到就会被炒鱿鱼。)  </p>
+</blockquote>
+</blockquote>
+
+<p>条件语气 --p154~155  </p>
+
+<blockquote>
+<p>句子中一旦加上语气助动词 (如: must, should, will/would、can/could、may/might等), 就产生了不确定的语气, 称为条件语气,例如:  </p>
+
+<blockquote>
+<p>You are right. (你是对的. )<br>
+You may be right. (你可能是对的. )  </p>
+</blockquote>
+
+<p>第1句中是以现在式来叙述事实的语气。第2句中因为加上了助动词may,就产生了不确定性(“可能对”表示不一定对)。<br>
+语气助动词有以下两点需要注意: </p>
+
+<ol>
+<li><p>表达时间的功能不完整<br>
+语气助动词中,must和should 这两个词在拼法上没有变化. 至于will/would,can/could,may/might这三对,虽然拼法有变化,可是并不表示时间, 而是语气的变化: 每一对的后者比前者更不确定。 例如:  </p>
+
+<blockquote>
+<p>The doctor thinks it can be AIDS.(医生认为可能是艾滋病.)<br>
+It could be anything--AIDS or a common cold.(还看不出来是什么病一一可能是艾滋病, 也可能是感冒.)  </p>
+</blockquote></li>
+<li><p>用完成式表达对过去的猜测<br>
+语气助动词用来猜测过去的事情时, 因为缺乏表达过去时间的能力, 所以要借助完成式来表达。 例如:  </p>
+
+<blockquote>
+<p>It may rain any minute now.(随时可能会下雨.)
+It may have rained a little last night.(昨晚可能下过一点雨.)  </p>
+</blockquote></li>
+</ol>
+</blockquote>
+
+<p>假设语气  --p155~157  </p>
+
+<blockquote>
+<p>这是一种“说反话”的语气, 表示所说的话和事实相反。这种语气是以动词的过去形态作为表达 “非事实” 的手段。  </p>
+
+<ol>
+<li><p>现在时间<br>
+例1 If I <mark><u>were</u></mark> you,I <mark><u>wouldn&#39;t do</u></mark> it.(假如我是你的话,我就不干.)<br>
+当然, 我不可能是你, 所以不能用叙述事实的语气I am you来表达。 假设语气是用动词的过去形态来表示 “非事实”, 因此用I were you 来表示。连带在主要从句中也用过去形态但不代表过去时间的would 来表示非事实, 而成为 wouldn&#39;t do 的动词形态.
+这句话选择用非事实的假设语气来说, 是为了使语气缓和一些, 以委婉的口吻劝对方不要做这件事。</p></li>
+<li><p>过去时间<br>
+例2 If I <mark><u>had known</u></mark> earlier,I <mark><u>might have done</u></mark> something.(如果我早知道的话, 也许早就采取一些行动了.)<br>
+这个句子的时间是过去时间, earlier表示从前。真正的事实是“从前并不知道”, “假如知道的话”, 这就是非事实了。因为时间本来就是过去, 若还要用过去形态来表达非事实语气, 就必须用过去完成的形态had known。同样的, 主要从句中也是用过去完成的形态: might是过去形态的拼法, have done 是原形动词的完成式。这一句话用非事实的假设语气来说,是为了表示惋惜、懊恼:“为什么当初不知道呢?”  </p></li>
+<li><p>未来时间<br>
+例3 If an asteroid <mark>should hit</mark> the earth,man <mark>could die</mark> out.(如果小行星撞击地球,人类可能会灭绝.)<br>
+这是未来的事情,严格说起来还不能确定, 但是发生的可能性甚低, 所以可以用非事实语气来叙述。条件从句中用过去形态但不代表过去式的should hit来表示非事实,主要从句中也是用 could die来表示非事实。<br>
+如果是绝无可能发生的事, 还有另一种表达方式:<br>
+If I <mark>were to take</mark> the bribe,I <mark>could</mark> never <mark>look</mark> at other people in
+the eye again.(我要是收下那笔贿款,就再也不能面对别人而问心无愧了.)<br>
+这是解释为什么你绝不可能去收贿的理由。 用be going to的过去形态were to 来表示未来也绝不会去做。 如果用的是should, 语气就比较松动, 表示应无发生的可能, 但不排除万一:<br>
+If I <mark>should take</mark> the money,could you <mark>guarantee</mark> secrecy?(万一我收下钱,你能保证守密吗?)  </p></li>
+</ol>
+</blockquote>
+
+<p>假设语气的归纳  --p157~160    </p>
+
+<blockquote>
+<ol>
+<li><p>句型的规律性<br>
+因为假设语气的句子是用过去形态来表示非事实, 所以动词看起来都是过去形态。从例1,例2和例3三个句子中可以看出,主要从句(排在后面的那个) 中都有过去拼法的语气助动词, 分别是would, might,could。这是因为这些句子都是表达在一个假定的条件(非事实)下 “就会”、 “就可能”、 “就能”有什么结果 (也是非事实), 所以: 假设语气的主要从句中都会有过去拼法的助动词存在。<br>
+在假设语气的条件从句中 (例1, 例2和例3中是由if引导的句子), 表示现在和过去时间的 (例 1与例2)都没有助动词存在,这是因为要先把假设的条件当真,所以不能用到表示不确定意味的助动词。 只有未来时间, 因为尚未发生, 无法完全排除不确定因素,所以用should来表示可能性极小的状况, (如例3),绝无可能的状况用were to来表示。 这是条件从句中唯一会见到助动词的地方。  </p></li>
+<li><p>动词的规律性<br>
+假设语气的动词都是以过去形态来表达非事实。若是现在时间就退后成过去式形态，过去时间也就退后一步, 成为过去完成式形态; 而未来时间则是两个从句都用过去拼法的助动词来表示。  </p></li>
+<li><p>混合时间的变化<br>
+假设语气的两个从句之间, 时间可能不同, 要分别判断,例如:<br>
+If I <mark>had studied</mark> harder <mark>in school</mark>,I <mark>could qualify</mark> for the job <mark>now</mark>.(我在学校时要是好好念书,现在就可以符合这项工作的要求了.)<br>
+条件从句是过去时间 ( 在学校时) 的假设语气, 要退后成过去完成式(had studied) 来表示非事实。 可是主要从句是现在时间(now),只要用过去拼法的 could就可以表达非事实了, 不需用到“过去+完成(could have qualified)&quot; 。  </p></li>
+<li><p>混合真假的变化<br>
+在假设语气中, 两个从句间的真假也可能不同, 例如:<br>
+I <mark>could have contributed</mark> to the fund drive then,only that I <mark>didn&#39;t have</mark> any money with me.(我本来可以响应募款活动的, 不过当时身上没带钱. )<br>
+这两个从句都是过去时间。前面的是主要从句,非事实, 所以用“过去+完成(could have contributed)&quot; 来表示。 后面的从句虽然时间相同,可是“没带钱”是事实, 所以不必改动语气, 直接用过
+去简单式didn&#39;t have 就可以了。  </p></li>
+<li><p>句型的变化<br>
+假设语气的句型很可能不是规规矩矩的 “条件从句+主要从句”的形态。例如:<br>
+It&#39;<mark>s</mark> time you kids <mark>were</mark> in bed.(你们这些小鬼现在该躺在床上了。)<br>
+主要从句 it is time 是事实上床时间是真的到了, 所以用现在简单式。从属从句 (不是条件从句)则是非事实: 小孩们都还没上床, 所以用过去拼法的 were in bed 来表示非事实语气。<br>
+再如<br>
+If only I <mark>had</mark> more time! (要是时间多一点有多好!)<br>
+这是现在时间的假设语气, 可是只留下条件从句, 把整个主要从句省略掉了 (有时间就可以如何, 并没有交待)。 还有<br>
+I wish I had more time!(真希望时间能多一点! )<br>
+主要从句是事实: 我真的希望, 所以用现在简单式I wish。宾语从句 (不是条件从句) 则是非事实: 时间并不能多出来, 所以要用过去式的假设语气had 来表示。  </p></li>
+</ol>
+</blockquote>
+
+<p>祈使语气  --p160~161  </p>
+
+<blockquote>
+<p>祈使句又称为命令句。这种语气可视为是条件语气中, 省略助动词来表示 “希望能成真, 但尚未实现”。例如: Come in! 可以视为 You may come in!的省略.<br>
+间接的命令句<br>
+The court demands that the witness leave the courtroom.(法官要求证人离开法庭. )<br>
+如果法官直接对证人提出要求, 他会说:<br>
+(You must)Leave the courtroom! (离开法庭! )<br>
+可是, 若经由第三者转述这个命令句, 主语已经不是you, 不能省略. 但这仍然是命令句的语气, 还不是事实, 所以仍然省略掉must, 用原形动词leave 来表示命令句语气。 再如:<br>
+There is a strong expectation among the public that someone take responsibility for the disaster.(民众强烈期望有人为这件灾难负起责任.)<br>
+这是一个期望, 还不是事实 (目前还没有人表示要负责), 所以是祈使句的语气,要用原形动词 take 来表示。<br>
+一般语法书上是列出一些规则, 如:<br>
+It is necessary that...(有必要.....)<br>
+I insist that...(我坚持......)<br>
+这些句型后面要用原形动词。一方面这些句型无法列得周全,另一方面也没有说明原因,所以许多读者一直不能真正了解。其实在笔者的观察中, 这就是一种命令句, 所以把它称为 “间接命令句”,放在祈使语气中来介绍。</p>
+</blockquote>
+
+<h3 id="toc_11">第十章 介系词</h3>
+
+<blockquote>
+<p>应通过泛读积累。</p>
+</blockquote>
+
+<p>介系词短语  --p172  </p>
+
+<blockquote>
+<p>所谓“介系词短语”, 就是由介系词加上一个名词短语所构成的意义单元, 在句中常被当做修饰语(形容词短语或副词短语),用来修饰名词、动词、形容词与副词等各种词类。它的位置通常是在所修饰的对象后面。<br>
+例<br>
+<mark><u>Cherries</u>(名词)</mark> are <mark><u>in season</u>(介系词短语)</mark> now.<br>
+(现在正是樱桃生产的季节. )<br>
+Eggs <mark><u>are sold</u>(动词)</mark> <mark><u>by the dozen</u>(介系词短语)</mark>.<br>
+(鸡蛋是论打出售的. )<br>
+The box is <mark><u>full</u>(形容词)</mark> <mark><u>of chocolates</u>(介系词短语)</mark>.<br>
+(盒子里装满了巧克力.)<br>
+He&#39;ll return <mark><u>tomorrow</u>(副词)</mark> <mark><u>at the latest</u>(介系词短语)</mark>.<br>
+(他最晚明天回来.)  </p>
+</blockquote>
+
+<p>空间的介系词  --p173~174    </p>
+
+<blockquote>
+<p>分点、线、面、体四类。</p>
+
+<ol>
+<li><p>点: at<br>
+例: Let&#39;s meet <mark><u>at the railway station</u></mark>.(我们火车站见。)<br>
+火车站虽然是立体的建筑, 可是用在这句话中, 火车站只表示双方约定的碰面地点, 好像台北市地图上的一个点一样, 所以要用表示“点”的介词at。</p></li>
+<li><p>线: on，along<br>
+例: Then we can go over the project <mark><u>on our way</u></mark> to Gaoxiong.<br>
+(这样, 我们可以在去高雄的路上商量计划。 )<br>
+由台北到高雄的火车路线是一条线,所以用on来表示。<br>
+例: We may go walking through the windy park,or drive <mark><u>along the beach</u></mark>.<br>
+(我们或者步行穿过风很大的公园, 或是沿着海滩开车。 )<br>
+海滩是海洋与陆地交界的一条线, 沿着海滩开车是沿着 “线”前进, 所以用along表示。  </p></li>
+<li><p>面: on<br>
+例: Several boats can be seen <mark><u>on the lake</u></mark>.(湖上有几条船)<br>
+湖泊虽然是有深度的立体,可是在这里指的是湖“面”上,所以用 on。  </p></li>
+<li><p>体: in<br>
+例:It&#39;s cool <mark><u>in the railway station</u></mark> because they have air-conditioning there.(火车站凉爽怡人, 因为有空调. )<br>
+同样是说火车站, 可是现在说的是里面有冷气,比较凉快。这是把火车站视为立体的空间看待, 所以介系词要用in。  </p></li>
+</ol>
+</blockquote>
+
+<p>时间的介系词  --p174  </p>
+
+<blockquote>
+<p>以at表示“点”,以in表示“长时间”,以on标示出特定日期。<br>
+The earthquake struck <mark><u>at 5:27 A.M</u></mark>.<br>
+(地震发生在凌晨5时27分。)<br>
+Typhoons seldom come <mark><u>in winter</u></mark>.<br>
+(台风很少在冬天来袭。)<br>
+There&#39;ll be a concert <mark><u>on New Year&#39;s Day</u></mark>.<br>
+(元旦有场音乐会。)  </p>
+</blockquote>
+
+<p>介系词的分辨  --p175~180  </p>
+
+<blockquote>
+<ol>
+<li><p>on one&#39;s way/in one&#39;s way<br>
+He&#39;s on his way to Taizhong.(他已上路, 要赶往台中. )<br>
+路线, 属于“线” 状的空间。<br>
+Step aside!You&#39;re in my way! (闪开! 你挡住我的路了!)<br>
+通过的路，是一个空间。</p></li>
+<li><p>arrive in/arrive at<br>
+We&#39;ll <mark><u>arrive at</u></mark> Honolulu in 5 minutes, where we&#39;ll refuel before flying on to San Francisco.<br>
+(飞机将在五分钟后到达檀香山, 加油后继续飞往旧金山。 )<br>
+Honolulu是飞往旧金山航线上的一个点。<br>
+The home-coming hero <mark><u>arrived in</u></mark> town and was greeted by the crowd gathered along Main Street.<br>
+(英雄凯旋回到故乡小镇, 受到群众在大街旁夹道欢迎.)<br>
+英雄进入小镇，视为立体空间。  </p></li>
+<li><p>made of/made from<br>
+of的意思比较直接，接近中文的“······的”。如 a chair made of wood，木头做的椅子。<br>
+from有“出自于······”的意思，比较有距离。如 wine made from grapes，葡萄做的酒，酒中看不见葡萄。  </p></li>
+<li><p>between/among<br>
+一般 between 用于表示两者之间，among 则是三者以上。<br>
+例外情况，between 有标示位置的功能，among 则没有。<br>
+Taizhong lies <mark><u>between</u></mark> Taibei and Tainan.<br>
+(台中位于台北与台南之间.)
+Among the major cities in Taiwan,Taizhong is the cleanest.<br>
+(在台湾主要城市中, 台中最为整洁.)<br>
+Taibei lies between Taoyuan,Yilan and Jilong.<br>
+(台北位于桃园、宜兰和基隆之间。)  </p></li>
+<li><p>throw to/throw at<br>
+I forgot my keys.Please get them at my desk and <mark><u>throw</u></mark> them <mark><u>to</u></mark> me.<br>
+(我忘记带钥匙。 请从我桌上拿来扔给我。 )<br>
+to代表方向，这是你在交待别人朝你的方向扔过来。<br>
+The kids are <mark><u>throwing</u></mark> rocks <mark><u>at</u></mark> the poor dog.<br>
+(小孩子往那可怜的狗身上扔石头。)<br>
+小孩瞄准狗打，是把它当做一个点。  </p></li>
+<li><p>from...to/from...through<br>
+The circus will be here four months,<mark><u>from</u></mark> May <mark><u>to</u></mark> September.<br>
+(马戏团要在这里表演四个月,从五月到九月。)<br>
+由五月到九月,没有讲明日期,可能是五月中到九月中,所以大概是四个月。<br>
+The circus will be here five months,<mark><u>from</u></mark> May <mark><u>through</u></mark> September.<br>
+(马戏团要在这里表演五个月, 从五月一直到九月. )<br>
+through是 “穿过” , 所以用来表示起迄时间时, 意思是 “头、尾者包括在内”，所以是五月一日至九月卅日, 包含整个的五月和九月,因而是五个月的时间。  </p></li>
+<li><p>above/over<br>
+above表示相对高度超过，over则有标示定点的功能。<br>
+Mt.Everest soars <mark><u>above</u></mark> all other peaks in the Alps.<br>
+(珠穆朗玛峰比阿尔卑斯山的其他山峰都要高.)<br>
+The little child couldn&#39;t keep the umbrella over his head and soon got wet.<br>
+(那个小孩撑不住伞, 不一会儿就淋湿了.)<br>
+over标示定点的功能，表示“在······上方”。  </p></li>
+<li><p>below/under<br>
+below表示相对高度较低，under则有标示定点的功能。<br>
+The submarine is below the surface now.<br>
+(潜艇在水面以下了.)<br>
+below 只能表示 “比较低的高度” 。<br>
+Watch out!There&#39;s a dog under your car.<br>
+(小心!车下有只狗!)<br>
+under表示“在······下方”。  </p></li>
+</ol>
+</blockquote>
+
+<h3 id="toc_12">第十一章 主语动词一致性</h3>
+
+<p>主语是一个还是两个人(或物）？ 对and的判断  --p187~192  </p>
+
+<blockquote>
+<ol>
+<li>Your brother John <mark>has</mark> come to see you.<br>
+brother是John,是一个人。<br></li>
+<li>Your brother and John <mark>have</mark> come to see you.<br>
+brother和John是两个人。</li>
+<li>The senator and delegate <mark>wants</mark> to make an announcement.<br>
+The senator and delegate视为一个名词短语，视为一个人，同时具有参议员和代表双重身份。<br></li>
+<li>The senator and the delegate <mark>want</mark> to make an announcemenl.<br>
+The senator and the delegate各有限定词，视为两个名词短语，指两个人。<br></li>
+<li>Every man and every woman <mark>has</mark> to do something for the country.<br>
+句中主语 every man 和every woman 虽然各有限定词,是两个名词短语, 似乎代表复数。不过再从意思上判断,man和woman是相对称的内容, 指人的两种性别。 重复every 是为了加强语气: 不是指有两个人, 而是表示不论男女, 每一个“人”. 亦即 every man and every woman 的语气近似 man or woman,every&quot;person&quot;,所以应该选择单数的动词。<br></li>
+<li>All work and no play <mark>makes</mark> Jack a dull boy.<br>
+主语all work和no play是两个名词短语(all和no都是限定词),似乎应为复数。不过从内容上来看, 一天二十四小时都在工作(work),就表示没有任何时间游戏 (no play)。所以all work and no play 与其说是两件事, 不如说是同一件事情的一体两面,重复是为了加强语气。 因此动词应选单数。<br></li>
+<li>A cup and saucer <mark>is</mark> placed on the table.<br>
+saucer是放在咖啡杯下的小碟子，与杯子可视为一组，a cup and saucer只用了一个限定词。<br></li>
+<li>A cup and a dish <mark>are</mark> placed on the table.<br>
+杯子和菜盘子不能看做一组。<br></li>
+<li>A brown and white dog is at your doorsteps.<br></li>
+<li>A brown and a white dog are fighting over a bone.<br></li>
+<li>Bread and butter <mark>is</mark> not very tasty but very filling.<br>
+Bread and butter 是一种食品:吐司面包涂奶油。<br></li>
+<li>Bread and butter <mark>have</mark> both risen in price.<br>
+both risen 双双涨价，表示是两种物品。<br></li>
+<li>Oil and water <mark>do</mark> not mix.<br>
+油和水“两种”物质不能混合。<br></li>
+</ol>
+</blockquote>
+
+<p>主语是哪一个?  --p192~195    </p>
+
+<blockquote>
+<p>主语中夹有对等连接词or、but，以及比较级连接词as、than时的判断。  </p>
+
+<ol>
+<li>You want to borrow money? But I,as well as you, <mark>am</mark> broke.<br>
+可还原为 I am broke as well as you are。<br></li>
+<li>I, no less than you, <mark>am</mark> responsible.<br>
+可还原为 I am no less responsible than you are.<br></li>
+<li>Everyone but a few complete idiots <mark>was</mark> able to see that.<br>
+but为否定的部分，不看，动词要视肯定的部分而定。 </li>
+<li>The eggs, not the hen, <mark>were</mark> stolen.<br>
+not后为否定部分，跟but的处理方法一样。<br></li>
+<li>Not only you but also I <mark>was</mark> at fault.<br>
+语气偏重于I,且前面部分有not，形式上否定前面的you，所以主语按I走。<br></li>
+<li>Either my father alone or both my parents <mark>are</mark> coming.<br>
+不能看出来到底谁能来，只知道两种情况只能发生一种，选靠近动词的部分做主语。<br></li>
+<li>Neither he nor his friends <mark>were</mark> there at that time.<br>
+也是只能二选一，选靠近动词的部分。<br></li>
+<li><mark>Dose</mark> he or his friends want to go?<br>
+靠近he，选he做主语。<br></li>
+</ol>
+</blockquote>
+
+<p>主语中有every、each、either、neither等表示“一”的字眼时  --p195~196     </p>
+
+<blockquote>
+<p>只要有这些表示“一”的字眼在,后面有名词的话就得使用单数名词, 做主语时也就得用单数动词配合。  </p>
+
+<ol>
+<li>Everybody <mark>is</mark> to report here tomorrow.<br></li>
+<li>Every student <mark>has</mark> several chapters to report on.<br></li>
+<li>Each <mark>has</mark> to make a five-minute speech.</li>
+<li>You <mark>have</mark> to make a five-m inute speech each.<br>
+(each 在这里用作修饰语, 主语是表示 “你们”的you所以是复数)<br></li>
+<li>Each of you <mark>is</mark> responsible for half of the job.<br>
+(这时主语是 each, 原来的you变成介系词of的宾语，既然each当主语, 就是单数)<br></li>
+</ol>
+</blockquote>
+
+<p>主语是关系代名词时    --p197  </p>
+
+<blockquote>
+<p>关系代名词代表其先行词。它本身没有单复数的变化, 作主语时完全要看它代表的先行词是什么, 借以判断一致性。 </p>
+
+<ol>
+<li>I don&#39;t trust people who talk too much.<br></li>
+<li>He has three options, which <mark>look</mark> equally attractive.<br>
+which代表three options。<br></li>
+<li>He has three options, which <mark>is</mark> a good thing.<br>
+which代表 “He has three options&quot;这句话。<br></li>
+<li>It <mark>was</mark> the Johnson boys who <mark>were</mark> here last night.<br>
+it是主语，who代表的是先行词the Johnson boys。<br></li>
+</ol>
+</blockquote>
+
+<p>以单位做主语时  --p198~199  </p>
+
+<blockquote>
+<ol>
+<li>He makes eighty thousand dollars a year, which <mark>is</mark> a lot of money.<br>
+八万块是一笔钱。 </li>
+<li>Ten seconds <mark>is</mark> quite a record for the 100-meter dash.<br>
+十秒是一项纪录。<br></li>
+</ol>
+</blockquote>
+
+<p>主语后面有介系词短语时  --p199~200    </p>
+
+<blockquote>
+<p>一般情况介系词短语不影响主语的单复数。  </p>
+
+<ol>
+<li>Mrs.Lindsey, together with her sons, <mark>is</mark> on a European tour.<br>
+主语是太太。</li>
+<li>The use of computers in business <mark>is</mark> now almost inevitable.<br>
+主语是use。 </li>
+<li>There <mark>is</mark> a list of things to buy in the handbag.<br>
+主语是list。<br></li>
+</ol>
+</blockquote>
+
+<p>主语为空的字眼时  --p200~202    </p>
+
+<blockquote>
+<p>如果主语是空的，只表达“全部/部分”的概念，看不出是什么东西，这是要看后面的介系词短语来判断单复数。  </p>
+
+<ol>
+<li>All of these <mark>are</mark> Lishan pears.<br></li>
+<li>All of the money <mark>has</mark> been spent.<br></li>
+<li>All but one of the pears <mark>are</mark> ripe.<br></li>
+<li>A lot of the pears <mark>are</mark> damaged. </li>
+<li>A lot of time <mark>has</mark> been wasted.<br></li>
+<li>Half of the pears still <mark>look</mark> good.<br></li>
+<li>Half of this pears <mark>is</mark> rotten.<br></li>
+<li>Some of the cost <mark>is</mark> in transportation.<br></li>
+<li>None of the pears <mark>is(are)</mark> really good to eat.<br>
+none 单复数都可以。<br></li>
+</ol>
+</blockquote>
+
+<p>a number/the number 的判断   --p202  </p>
+
+<blockquote>
+<p>the number 指的是一个数字，是单数。a number 指若干个可以数得出数目的东西，用复数。<br>
+45. The number of people in the demonstration <mark>is</mark> five thousand.<br>
+46. A number of people <mark>have</mark> brought eggs to throw.  </p>
+</blockquote>
+
+<p>a pair of...的判断  --p203  </p>
+
+<blockquote>
+<p>主语是a pair，是单数。<br>
+47. A pair of pants <mark>is</mark> hanging on the wall.<br>
+用a pair来表示的东西，像shoes、glasses、trousers、scissors等等，也可以直接说these shoes...等，这时用复数。<br>
+48. These pants <mark>are</mark> very fancy.<br>
+这句话看不出是指一条还是几条裤子，因为都是复数形式。  </p>
+</blockquote>
+
+<p>集合名词  --p203~204   </p>
+
+<blockquote>
+<p>集合名词(Collective Nouns)在英语中不多,常见的只有staff(员工,幕僚)、faculty(教员)、以及 family、police、committee、crew（机员, 船员) 这几个字。 这种词用来表示 “一个单位, 集团” 时要用单数动词, 但是不加-s而用来表示单位内的 “成员” 时, 要用复数动词。  </p>
+
+<ol>
+<li>The committee <mark>is(are)</mark> studying the proposal.<br>
+解释为委员会时用单数，解释为委员会中的委员们时用复数。<br></li>
+<li>The committee <mark>is</mark> five years old.<br>
+委员会这个“单位&quot;，单数。<br></li>
+<li>The committee <mark>are</mark> mostly Republican politicians.<br>
+补语为”大多为共和党政客”，主语解释为“委员们”合理。<br></li>
+</ol>
+</blockquote>
+
+<p>一些以S结尾的名词  --p205~206  </p>
+
+<blockquote>
+<p>名词词尾的S不见得是复数，有些反而只能用单数形式，像有些代表学科、疾病的字眼经常是如此。 </p>
+
+<ol>
+<li>Mathematics <mark>is</mark> my forte.  (数学我最拿手。)<br></li>
+<li>Mumps primarily <mark>attacks</mark> children.  (腮腺炎好发于儿童。)<br></li>
+<li>Statistics <mark>was</mark> born in the gambling house.<br>
+Statistics指统计学。<br></li>
+<li>The statistics <mark>are</mark> not all accurate.<br>
+statistics指一批统计数字，用复数。<br></li>
+</ol>
+</blockquote>
+
+
+
+<script type="text/javascript">
+var _self="undefined"!=typeof window?window:"undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?self:{},Prism=function(){var e=/\blang(?:uage)?-(\w+)\b/i,t=0,n=_self.Prism={util:{encode:function(e){return e instanceof a?new a(e.type,n.util.encode(e.content),e.alias):"Array"===n.util.type(e)?e.map(n.util.encode):e.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/\u00a0/g," ")},type:function(e){return Object.prototype.toString.call(e).match(/\[object (\w+)\]/)[1]},objId:function(e){return e.__id||Object.defineProperty(e,"__id",{value:++t}),e.__id},clone:function(e){var t=n.util.type(e);switch(t){case"Object":var a={};for(var r in e)e.hasOwnProperty(r)&&(a[r]=n.util.clone(e[r]));return a;case"Array":return e.map&&e.map(function(e){return n.util.clone(e)})}return e}},languages:{extend:function(e,t){var a=n.util.clone(n.languages[e]);for(var r in t)a[r]=t[r];return a},insertBefore:function(e,t,a,r){r=r||n.languages;var l=r[e];if(2==arguments.length){a=arguments[1];for(var i in a)a.hasOwnProperty(i)&&(l[i]=a[i]);return l}var o={};for(var s in l)if(l.hasOwnProperty(s)){if(s==t)for(var i in a)a.hasOwnProperty(i)&&(o[i]=a[i]);o[s]=l[s]}return n.languages.DFS(n.languages,function(t,n){n===r[e]&&t!=e&&(this[t]=o)}),r[e]=o},DFS:function(e,t,a,r){r=r||{};for(var l in e)e.hasOwnProperty(l)&&(t.call(e,l,e[l],a||l),"Object"!==n.util.type(e[l])||r[n.util.objId(e[l])]?"Array"!==n.util.type(e[l])||r[n.util.objId(e[l])]||(r[n.util.objId(e[l])]=!0,n.languages.DFS(e[l],t,l,r)):(r[n.util.objId(e[l])]=!0,n.languages.DFS(e[l],t,null,r)))}},plugins:{},highlightAll:function(e,t){var a={callback:t,selector:'code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code'};n.hooks.run("before-highlightall",a);for(var r,l=a.elements||document.querySelectorAll(a.selector),i=0;r=l[i++];)n.highlightElement(r,e===!0,a.callback)},highlightElement:function(t,a,r){for(var l,i,o=t;o&&!e.test(o.className);)o=o.parentNode;o&&(l=(o.className.match(e)||[,""])[1],i=n.languages[l]),t.className=t.className.replace(e,"").replace(/\s+/g," ")+" language-"+l,o=t.parentNode,/pre/i.test(o.nodeName)&&(o.className=o.className.replace(e,"").replace(/\s+/g," ")+" language-"+l);var s=t.textContent,u={element:t,language:l,grammar:i,code:s};if(!s||!i)return n.hooks.run("complete",u),void 0;if(n.hooks.run("before-highlight",u),a&&_self.Worker){var c=new Worker(n.filename);c.onmessage=function(e){u.highlightedCode=e.data,n.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(u.element),n.hooks.run("after-highlight",u),n.hooks.run("complete",u)},c.postMessage(JSON.stringify({language:u.language,code:u.code,immediateClose:!0}))}else u.highlightedCode=n.highlight(u.code,u.grammar,u.language),n.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(t),n.hooks.run("after-highlight",u),n.hooks.run("complete",u)},highlight:function(e,t,r){var l=n.tokenize(e,t);return a.stringify(n.util.encode(l),r)},tokenize:function(e,t){var a=n.Token,r=[e],l=t.rest;if(l){for(var i in l)t[i]=l[i];delete t.rest}e:for(var i in t)if(t.hasOwnProperty(i)&&t[i]){var o=t[i];o="Array"===n.util.type(o)?o:[o];for(var s=0;s<o.length;++s){var u=o[s],c=u.inside,g=!!u.lookbehind,h=!!u.greedy,f=0,d=u.alias;u=u.pattern||u;for(var p=0;p<r.length;p++){var m=r[p];if(r.length>e.length)break e;if(!(m instanceof a)){u.lastIndex=0;var y=u.exec(m),v=1;if(!y&&h&&p!=r.length-1){var b=r[p+1].matchedStr||r[p+1],k=m+b;if(p<r.length-2&&(k+=r[p+2].matchedStr||r[p+2]),u.lastIndex=0,y=u.exec(k),!y)continue;var w=y.index+(g?y[1].length:0);if(w>=m.length)continue;var _=y.index+y[0].length,P=m.length+b.length;if(v=3,P>=_){if(r[p+1].greedy)continue;v=2,k=k.slice(0,P)}m=k}if(y){g&&(f=y[1].length);var w=y.index+f,y=y[0].slice(f),_=w+y.length,S=m.slice(0,w),O=m.slice(_),j=[p,v];S&&j.push(S);var A=new a(i,c?n.tokenize(y,c):y,d,y,h);j.push(A),O&&j.push(O),Array.prototype.splice.apply(r,j)}}}}}return r},hooks:{all:{},add:function(e,t){var a=n.hooks.all;a[e]=a[e]||[],a[e].push(t)},run:function(e,t){var a=n.hooks.all[e];if(a&&a.length)for(var r,l=0;r=a[l++];)r(t)}}},a=n.Token=function(e,t,n,a,r){this.type=e,this.content=t,this.alias=n,this.matchedStr=a||null,this.greedy=!!r};if(a.stringify=function(e,t,r){if("string"==typeof e)return e;if("Array"===n.util.type(e))return e.map(function(n){return a.stringify(n,t,e)}).join("");var l={type:e.type,content:a.stringify(e.content,t,r),tag:"span",classes:["token",e.type],attributes:{},language:t,parent:r};if("comment"==l.type&&(l.attributes.spellcheck="true"),e.alias){var i="Array"===n.util.type(e.alias)?e.alias:[e.alias];Array.prototype.push.apply(l.classes,i)}n.hooks.run("wrap",l);var o="";for(var s in l.attributes)o+=(o?" ":"")+s+'="'+(l.attributes[s]||"")+'"';return"<"+l.tag+' class="'+l.classes.join(" ")+'" '+o+">"+l.content+"</"+l.tag+">"},!_self.document)return _self.addEventListener?(_self.addEventListener("message",function(e){var t=JSON.parse(e.data),a=t.language,r=t.code,l=t.immediateClose;_self.postMessage(n.highlight(r,n.languages[a],a)),l&&_self.close()},!1),_self.Prism):_self.Prism;var r=document.currentScript||[].slice.call(document.getElementsByTagName("script")).pop();return r&&(n.filename=r.src,document.addEventListener&&!r.hasAttribute("data-manual")&&document.addEventListener("DOMContentLoaded",n.highlightAll)),_self.Prism}();"undefined"!=typeof module&&module.exports&&(module.exports=Prism),"undefined"!=typeof global&&(global.Prism=Prism);
+</script>
+
+
+</body>
+
+</html>
